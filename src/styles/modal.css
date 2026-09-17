@@ -1,0 +1,237 @@
+/* ============================================================
+   AURELIA Haute Joaillerie - Modal & Popup Styles
+   ============================================================ */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 7, 6, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-dialog {
+  background: #151311;
+  border: 1px solid rgba(197, 168, 105, 0.35);
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(197, 168, 105, 0.15);
+  position: relative;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  padding: 24px 28px 18px;
+  border-bottom: 1px solid rgba(197, 168, 105, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.modal-header-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: #FAF8F5;
+  font-weight: 500;
+}
+
+.modal-header-subtitle {
+  font-size: 0.78rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: 1px solid rgba(197, 168, 105, 0.25);
+  color: #DDD6CE;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  padding: 24px 28px 30px;
+}
+
+/* Pre-selected Design Card Preview */
+.modal-design-preview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(197, 168, 105, 0.08);
+  border: 1px solid rgba(197, 168, 105, 0.25);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 22px;
+}
+
+.modal-preview-img {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid rgba(197, 168, 105, 0.4);
+}
+
+.modal-preview-info h5 {
+  color: #FAF8F5;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.modal-preview-code {
+  font-size: 0.76rem;
+  color: var(--gold-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #DDD6CE;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  background: #0E0D0C;
+  border: 1px solid rgba(197, 168, 105, 0.28);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: #FAF8F5;
+  font-size: 0.92rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 14px rgba(197, 168, 105, 0.25);
+  background: #141210;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #6C645A;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Success Confirmation Card */
+.modal-success-card {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.modal-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(197, 168, 105, 0.15);
+  border: 2px solid var(--gold-primary);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.modal-success-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: #FAF8F5;
+  margin-bottom: 8px;
+}
+
+.modal-success-desc {
+  color: #AAA196;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  max-width: 440px;
+  margin: 0 auto 24px;
+}
+
+.modal-ref-badge {
+  display: inline-block;
+  background: #0E0D0C;
+  border: 1px dashed var(--gold-primary);
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  color: var(--gold-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 580px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .modal-dialog {
+    margin: 10px;
+  }
+  .modal-header, .modal-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

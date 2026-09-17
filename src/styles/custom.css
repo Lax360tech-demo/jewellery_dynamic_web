@@ -1,0 +1,150 @@
+/* ============================================================
+   AURELIA Haute Joaillerie - Custom Jewellery Studio Styles
+   ============================================================ */
+
+.custom-studio-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.custom-studio-info {
+  position: static;
+}
+
+.custom-step-card {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.custom-step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(197, 168, 105, 0.12);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.custom-step-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+  color: var(--text-dark);
+}
+
+.custom-step-card p {
+  font-size: 0.86rem;
+  color: var(--text-dark-muted);
+  line-height: 1.6;
+}
+
+/* Custom Form Box - Fully visible, natural page scrolling only */
+.custom-form-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(197, 168, 105, 0.3);
+  padding: 40px 36px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  overflow: visible;
+  height: auto;
+  max-height: none;
+}
+
+.custom-form-card form {
+  overflow: visible;
+  height: auto;
+  max-height: none;
+}
+
+/* Ensure textarea never displays an internal scrollbar */
+.custom-form-card .form-textarea {
+  overflow: hidden;
+  resize: vertical;
+  min-height: 95px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.custom-form-card .form-textarea::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Reference Image Upload Box */
+.upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px dashed rgba(197, 168, 105, 0.45);
+  border-radius: var(--radius-sm);
+  padding: 28px 20px;
+  text-align: center;
+  background: #FAF8F5;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.upload-dropzone:hover {
+  border-color: var(--gold-primary);
+  background: rgba(197, 168, 105, 0.08);
+}
+
+.upload-preview-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.upload-preview-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gold-primary);
+}
+
+.upload-remove-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #0E0D0C;
+  border: 1px solid var(--gold-primary);
+  color: #FAF8F5;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .custom-studio-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .custom-studio-info {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-form-card {
+    padding: 26px 20px;
+  }
+}

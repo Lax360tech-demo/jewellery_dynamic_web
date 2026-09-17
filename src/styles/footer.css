@@ -1,0 +1,219 @@
+/* ============================================================
+   AURELIA Haute Joaillerie - Footer Styles
+   ============================================================ */
+
+.site-footer {
+  background-color: #0B0A09;
+  border-top: 1px solid rgba(197, 168, 105, 0.22);
+  color: #DDD6CE;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-top {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.8fr;
+  gap: 50px;
+}
+
+/* Brand Column */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-brand-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #FAF8F5;
+  line-height: 1;
+}
+
+.footer-brand-subtitle {
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  margin-top: 4px;
+}
+
+.footer-brand-desc {
+  color: #9C948A;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 26px;
+  max-width: 360px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(197, 168, 105, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #DDD6CE;
+  transition: all var(--transition-normal);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.social-link:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(197, 168, 105, 0.2);
+}
+
+/* Column Headings */
+.footer-col-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FAF8F5;
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 28px;
+  height: 1.5px;
+  background: var(--gold-primary);
+}
+
+/* Links List */
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link-item a {
+  color: #AAA196;
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-link-item a:hover {
+  color: var(--gold-primary);
+  transform: translateX(4px);
+}
+
+/* Contact Column */
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #AAA196;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.contact-item-icon {
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(197, 168, 105, 0.15);
+  padding: 24px 0;
+  font-size: 0.82rem;
+  color: #887F75;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-badges {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.76rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.08em;
+}
+
+.footer-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Responsive Footer */
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-top {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .footer-badges {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
