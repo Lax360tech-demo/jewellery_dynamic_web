@@ -44,6 +44,7 @@ export const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/jewellery/:id" element={<JewelleryDetail />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/*" element={<Admin />} />
         </Routes>
       </main>
 
